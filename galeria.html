@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Velvet Studio T</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Velvet Studio <span>T</span></a>
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="quienes-somos.html#contacto">Contacto</a></li>
+            <li class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">Nuestros Trabajos</h1>
+        <div class="filtros" id="filtrosGaleria"></div>
+        <div class="galeria-grid" id="galeria-grid"></div>
+    </div>
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-cerrar">&times;</span>
+    <img class="lightbox-imagen" id="lightbox-imagen" src="">
+    <a href="#" id="lightbox-wa" class="lightbox-wa" target="_blank">
+        <i class="bi bi-whatsapp"></i> Cotizar este estilo
+    </a>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes Somos</a>
+            <a href="galeria.html">Galería</a>
+            <a href="quienes-somos.html#contacto">Contacto</a>
+        </div>
+        <p>© 2026 Velvet Studio T</p>
+    </div>
+</footer>
+
+<!-- WhatsApp flotante con gradiente -->
+<a href="https://wa.me/" class="whatsapp-flotante" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="js/galeria.js"></script>
+<script>
+    const menuIcon = document.getElementById('menuIcon');
+    const navLinksMenu = document.getElementById('navLinks');
+    if (menuIcon) menuIcon.addEventListener('click', () => navLinksMenu.classList.toggle('active'));
+</script>
+</body>
+</html>
