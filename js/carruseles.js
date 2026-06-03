@@ -70,3 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initSwiperDestacados();
     initSwiperTestimonios();
 });
+
+
+
+////lazy///
+
+container.innerHTML = trabajosDestacados.map(item => `
+    <div class="swiper-slide">
+        <img src="${item.img}" alt="Trabajo destacado" loading="lazy">
+        <div class="card-content">
+            <p>${item.descripcion}</p>
+        </div>
+    </div>
+`).join('');

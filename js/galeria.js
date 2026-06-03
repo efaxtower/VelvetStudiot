@@ -80,3 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === lightbox) cerrarLightbox();
     });
 });
+
+
+///lazy///
+grid.innerHTML = filtrados.map((t, index) => `
+    <div class="galeria-item" data-index="${index}" data-imagen="${t.imagen}" data-estilo="${t.estilo}">
+        <img src="${t.imagen}" alt="Tatuaje ${t.estilo}" loading="lazy">
+        <div class="galeria-info">
+            <span>${t.estilo}</span>
+        </div>
+    </div>
+`).join('');
